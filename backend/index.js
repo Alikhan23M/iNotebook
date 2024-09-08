@@ -12,10 +12,9 @@ const app = express();
 
 // Use the CORS middleware with the specified options
 app.use(cors({
-  origin: '*', // Allow all origins
+  origin: 'https://i-notebook-umdj.vercel.app', // Allow all origins
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  optionsSuccessStatus: 200
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 // for connecting to MongoDB call the function
