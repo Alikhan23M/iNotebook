@@ -18,7 +18,13 @@ const app = express();
 
 
 // Use the CORS middleware with the specified options
-app.use(cors());
+app.use(cors({
+  origin: '*', // Allow all origins
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  optionsSuccessStatus: 200
+}));
+
 // define a port for the backend 
 const port = 5000
 
