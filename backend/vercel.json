@@ -15,5 +15,10 @@
         "Access-Control-Allow-Origin":"*"
     }
     }
-  ]
+  ],
+   "functions": {
+    "api/*.js": {
+      "maxDuration": 10 // Increase the duration as needed
+    }
+  }
 }
