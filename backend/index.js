@@ -1,21 +1,14 @@
 // =========== This is our main entry point of the backend ========
 
-// Import the file that will connect us to Mongodb
+// Import the file that will connect us to MongoDB
 const connectToMongo = require('./db');
 
-// Export express for cteating our own backend and routes
-const express = require('express')
+// Export express for creating our own backend and routes
+const express = require('express');
 var cors = require('cors');
-
-// for connecting to mongo db call the function
-connectToMongo();
 
 // Create the app object 
 const app = express();
-
-
-// Define CORS options
-
 
 // Use the CORS middleware with the specified options
 app.use(cors({
@@ -25,9 +18,11 @@ app.use(cors({
   optionsSuccessStatus: 200
 }));
 
-// define a port for the backend 
-const port = 5000
+// for connecting to MongoDB call the function
+connectToMongo();
 
+// Define a port for the backend 
+const port = 5000;
 
 app.use(express.json());
 
@@ -37,14 +32,13 @@ app.get('/', (req, res) => {
 });
 
 //#1 Route for authentication
-
 // When the user comes on this path we actually import the auth.js file
 app.use('/api/auth', require('./routes/auth.js'));
 
 //#2 Route for fetching notes from the db
-app.use('/api/notes', require('./routes/notes.js'))
+app.use('/api/notes', require('./routes/notes.js'));
 
-// function for listning the server and printing a message on the console
+// Function for listening to the server and printing a message on the console
 app.listen(port, () => {
-    console.log(`listning at http://localhost:${port}`);
-})
+    console.log(`listening at http://localhost:${port}`);
+});
