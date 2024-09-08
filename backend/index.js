@@ -16,7 +16,7 @@ const app = express();
 
 // Define CORS options
 const corsOptions = {
-  origin: 'http://example.com', // Replace with the URL you want to allow
+  origin: 'https://i-notebook-umdj.vercel.app/', // Replace with the URL you want to allow
   optionsSuccessStatus: 200 // Some legacy browsers choke on 204
 };
 
