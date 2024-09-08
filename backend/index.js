@@ -15,13 +15,10 @@ const app = express();
 
 
 // Define CORS options
-const corsOptions = {
-  origin: 'https://i-notebook-umdj.vercel.app', 
-  optionsSuccessStatus: 200 // Some legacy browsers choke on 204
-};
+
 
 // Use the CORS middleware with the specified options
-app.use(cors(corsOptions));
+app.use(cors());
 // define a port for the backend 
 const port = 5000
 
