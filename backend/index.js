@@ -5,7 +5,7 @@ const connectToMongo = require('./db');
 
 // Export express for creating our own backend and routes
 const express = require('express');
-var cors = require('cors');
+const cors = require('cors');
 
 // Create the app object 
 const app = express();
