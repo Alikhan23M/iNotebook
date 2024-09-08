@@ -1,0 +1,36 @@
+body{
+    background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    
+}
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 30rem;
+    margin: auto;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+}
+
+.login-container img {
+    height: 7rem;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container form input {
+    width: 18rem;
+}
+.btn{
+   background-color: #F7CE68;
+   border: 1px solid black;
+}
+.btn:hover{
+    background-color: #f3ba2c;
+}
