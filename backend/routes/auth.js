@@ -91,7 +91,6 @@ router.post('/createuser', [
 
     // Return the token as a json
     success = true;
-      alert('Nice')
     res.json({success, authToken, username});
 
   } catch (error) {
