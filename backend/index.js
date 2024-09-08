@@ -14,7 +14,14 @@ connectToMongo();
 const app = express();
 
 
-app.use(cors());
+// Define CORS options
+const corsOptions = {
+  origin: 'http://example.com', // Replace with the URL you want to allow
+  optionsSuccessStatus: 200 // Some legacy browsers choke on 204
+};
+
+// Use the CORS middleware with the specified options
+app.use(cors(corsOptions));
 // define a port for the backend 
 const port = 5000
 
