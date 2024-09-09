@@ -11,7 +11,12 @@ const cors = require('cors');
 const app = express();
 
 // Use the CORS middleware with the specified options
-app.use(cors());
+const corsOptions = {
+    origin: 'https://i-notebook-d39w.vercel.app',
+    optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 // for connecting to MongoDB call the function
 connectToMongo();
