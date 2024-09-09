@@ -4,7 +4,7 @@ import NoteContext from "./noteContext";
 
 
 const NoteState = (props) => {
-  const host = 'https://i-notebook-rust.vercel.app/'
+  const host = 'https://i-notebook-rust.vercel.app'
   const notesInitial = []
   const [notes, setNotes] = useState(notesInitial)
 
