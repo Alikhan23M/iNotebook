@@ -3,7 +3,7 @@ import noteContext from '../Context/noteContext';
 
 export default function About() {
     return (
-        <div className="container my-5">
+        <div className="container" style={{marginTop:'5rem'}}>
             <h1 className="text-center mb-4">About Us</h1>
             <p className="lead">
                 Welcome to <strong>iNotebook</strong>, your personal online notebook designed to keep your notes safe, secure, and accessible from anywhere. Our mission is to provide a seamless and efficient note-taking experience for users who value privacy and convenience.
